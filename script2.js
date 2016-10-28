@@ -13,5 +13,5 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, ...
   }
 }
 
-request.open('GET', 'http://127.0.0.1:8000', true);
+request.open('GET', 'http://www.msn.com/', true);
 request.send(null);
