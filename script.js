@@ -1,5 +1,4 @@
-    <script type="text/javascript">
-    //<![CDATA[
+
     
     var invocation = new XMLHttpRequest();
     var url = 'http://aruner.net/resources/accesscontrolwithget/';
@@ -40,7 +39,3 @@
         else
             dump("currently the application is at" + invocation.readyState);
     }
-    //]]>
-    
-    
-    </script>
