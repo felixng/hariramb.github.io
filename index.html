@@ -3,52 +3,7 @@
  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Simple use of CrossSite XMLHttpRequest (Using Access Control)</title>
-    <script type="text/javascript">
-    //<![CDATA[
-    
-    var invocation = new XMLHttpRequest();
-    var url = 'http://127.0.0.1:8000/img.png';
-    var invocationHistoryText;
-    
-    function callOtherDomain(){
-        if(invocation)
-        {    
-            invocation.open('GET', url, true);
-            invocation.onreadystatechange = handler;
-            invocation.send(); 
-        }
-        else
-        {
-            invocationHistoryText = "No Invocation TookPlace At All";
-            var textNode = document.createTextNode(invocationHistoryText);
-            var textDiv = document.getElementById("textDiv");
-            textDiv.appendChild(textNode);
-        }
-        
-    }
-    function handler(evtXHR)
-    {
-        if (invocation.readyState == 4)
-        {
-                if (invocation.status == 200)
-                {
-                    var response = invocation.responseXML;
-                    var invocationHistory = response.getElementsByTagName('invocationHistory').item(0).firstChild.data;
-                    invocationHistoryText = document.createTextNode(invocationHistory);
-                    var textDiv = document.getElementById("textDiv");
-                    textDiv.appendChild(invocationHistoryText);
-                    
-                }
-                else
-                    alert("Invocation Errors Occured");
-        }
-        else
-            dump("currently the application is at" + invocation.readyState);
-    }
-    //]]>
-    
-    
-    </script>
+<script src="https://hariramb.github.io/script.js" />
 </head>
  <body>
     <form id="controlsToInvoke" action="">
