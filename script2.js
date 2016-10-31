@@ -1,17 +1,4 @@
-var request;
-if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-  request = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE
-  try {
-    request = new ActiveXObject('Msxml2.XMLHTTP');
-  } 
-  catch (e) {
-    try {
-      request = new ActiveXObject('Microsoft.XMLHTTP');
-    } 
-    catch (e) {}
-  }
-}
-
-request.open('GET', 'http://www.msn.com/', true);
-request.send(null);
+var x = new XMLHttpRequest();
+x.open("GET", "http://127.0.0.1:8080/job/d2ef3763041956dde500eff003d090e05a71feb7/ws/results.json");
+x.send();
+document.write(x.responseText);
